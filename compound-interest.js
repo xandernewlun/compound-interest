@@ -2,11 +2,13 @@ var ci;
 
 window.onload = (function(){
 	var private = {
-		rate: document.getElementById("rate").value / 100,
-		base_amount: document.getElementById("base_amount").value,
-		years: document.getElementById("years").value,
-		comp_per_year: document.getElementById("comp_per_year").value,
+		rate: parseFloat(document.getElementById("rate").value) / 100,
+		base_amount: parseFloat(document.getElementById("base_amount").value),
+		years: parseFloat(document.getElementById("years").value),
+		comp_per_year: parseFloat(document.getElementById("comp_per_year").value),
 	};
+
+	console.log(private.rate, private.base_amount, private.years, private.comp_per_year);
 
 	public = {
 		solve: function(){
