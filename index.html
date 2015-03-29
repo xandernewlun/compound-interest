@@ -2,12 +2,30 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css">
-		<script type="text/javascript" src="compound-interest.js"></script>
+		<script type="text/javascript" src="compound-interest.js">
+		</script>
 		<title>Compound Interest</title>
 	</head>
 	<body>
 		<h1>
 			Compound Interest
 		</h1>
+		<p>
+			Years: <input type="number" min="0" max="1000" id="years"> (hint: for half year put 0.5)
+		</p>
+		<p>
+			Rate: <input type="number" min="0.00" max="100.00" id="rate"> Please do <b><i>NOT</i></b> put a %.
+		</p>
+		<p>
+			Base Amount: <input type="number" min="1" id="base_amount">
+		</p>
+		<p>
+			Times Compounded Per Year: <input type="number" min="1" id="comp_per_year">
+		</p>
+		
+		<button type="button" onclick="ci.updateSolution()">Submit</button>
+
+		<p id="message"></p>
+		<p id="solution"></p>
 	</body>
 </html>
